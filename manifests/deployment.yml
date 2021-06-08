@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "tothemoon-0476"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "tothemoon-0476"
+  template:
+    metadata:
+      labels:
+        app: "tothemoon-0476"
+    spec:
+      containers:
+        - name: "tothemoon-0476"
+          image: "newcontain111aa.azurecr.io/tothemoon"
+          ports:
+          - containerPort: 80
