@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "tothemoon-0476"
+    labels:
+        app: "tothemoon-0476"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: tothemoon95c7-tothemoon-0476.37af1ed2bb594581ac6c.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "tothemoon-0476"
+                servicePort: 80
